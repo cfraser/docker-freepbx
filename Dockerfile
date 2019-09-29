@@ -191,7 +191,7 @@ LABEL maintainer="Dave Conroy (dave at tiredofit dot ca)"
        echo '%zabbix ALL=(asterisk) NOPASSWD:/usr/sbin/asterisk' >> /etc/sudoers
 
 ### Networking Configuration
-   EXPOSE 80 443 4445 4569 5060/udp 5160/udp 5061 5161 8001 8003 8008 8009 18000-20000/udp
+   EXPOSE 80 443 4445 4569 5060/udp 5160/udp 5061 5161 8001 8003 8008 8009 18000-18100/udp
 
 ### Files Add
    ADD install /
