@@ -188,29 +188,7 @@ LABEL maintainer="Dave Conroy (dave at tiredofit dot ca)"
        mkdir -p /var/log/httpd && \
        \
 ### Zabbix Setup
-       echo '%zabbix ALL=(asterisk) NOPASSWD:/usr/sbin/asterisk' >> /etc/sudoers && \
-       \
-### Setup for Data Persistence
-       mkdir -p /assets/config/var/lib/ /assets/config/home/ && \
-       mv /home/asterisk /assets/config/home/ && \
-       ln -s /data/home/asterisk /home/asterisk && \
-       mv /var/lib/asterisk /assets/config/var/lib/ && \
-       ln -s /data/var/lib/asterisk /var/lib/asterisk && \
-       ln -s /data/usr/local/fop2 /usr/local/fop2 && \
-       mkdir -p /assets/config/var/run/ && \
-       mv /var/run/asterisk /assets/config/var/run/ && \
-       mv /var/lib/mysql /assets/config/var/lib/ && \
-       mkdir -p /assets/config/var/spool && \
-       mv /var/spool/cron /assets/config/var/spool/ && \
-       ln -s /data/var/spool/cron /var/spool/cron && \
-       mkdir -p /var/run/mongodb && \
-       rm -rf /var/lib/mongodb && \
-       ln -s /data/var/lib/mongodb /var/lib/mongodb && \
-       ln -s /data/var/run/asterisk /var/run/asterisk && \
-       rm -rf /var/spool/asterisk && \
-       ln -s /data/var/spool/asterisk /var/spool/asterisk && \
-       rm -rf /etc/asterisk && \
-       ln -s /data/etc/asterisk /etc/asterisk
+       echo '%zabbix ALL=(asterisk) NOPASSWD:/usr/sbin/asterisk' >> /etc/sudoers
 
 ### Networking Configuration
    EXPOSE 80 443 4445 4569 5060/udp 5160/udp 5061 5161 8001 8003 8008 8009 18000-20000/udp
