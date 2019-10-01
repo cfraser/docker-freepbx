@@ -8,7 +8,7 @@ LABEL maintainer="Dave Conroy (dave at tiredofit dot ca)"
        ASTERISK_VERSION=16.5.1 \
        BCG729_VERSION=1.0.4 \
        SPANDSP_VERSION=20180108 \
-       FREEPBX_VERSION=15.0.16.15 \
+       FREEPBX_VERSION=15.0.16.18 \
        UCP_FIRST=TRUE
 
 ### Pin libxml2 packages to Debian repositories
